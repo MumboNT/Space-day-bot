@@ -7,7 +7,7 @@ const client = new Discord.Client();
 var token = process.env.TOKEN;
 
 client.login(token);
-client.login("");
+//client.login("");
 
 var week = 1;
 var moon = 1;
