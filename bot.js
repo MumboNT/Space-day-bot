@@ -81,7 +81,7 @@ client.on('ready', () => {
    }
    //Display possible values (Season)
    if (msg.content.startsWith("!SeasonValues") && msg.channel.id === id) {
-     msg.channel.send("Possible season values:\n 1 (Winter) <1-9, 49-52>\n 2 (Spring) <10-22>\n 3 (Summer) <23-35>\n 4 (Autumn) <36-48>\n");
+     msg.channel.send("Possible season values:\n 1 (Wet) <1-26>\n 2 (Dry) <27-52>\n");
    }
    //Displays time until next update is posted.
    if (msg.content.startsWith("!NextUpdate") && msg.channel.id === id) {
