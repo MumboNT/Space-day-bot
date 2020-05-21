@@ -105,9 +105,14 @@ client.on('ready', () => {
   date = new Date();
   date.setHours(date.getHours() - 5);
 
+  console.log("Current Date: " + date.getDate() + " Last Date: " + latestDate.getDate());
+  console.log( ((23-(date.getHours()))) + " Hours, " + (58 - (date.getMinutes())) + " minutes, and " + (60 - (date.getSeconds())) + " seconds until 11:59PM");
+
+
   setTimeout(function(){
 
     if(date.getDate() != latestDate.getDate())  {
+
       timeTrackerUpdate();
     }
 
@@ -256,6 +261,7 @@ function getForecast(){
     string = string + "**Wind Speed:** " + wind  + " mph (" + Math.round((wind*1.6)) + " kph)\n";
     string = string + string2 + "===================================\n";
   }
+  bad = 0;
   channel2 = client.channels.cache.get(id2);
   channel2.send(string);
   if(string3 !== "") {
@@ -479,7 +485,7 @@ function getLastValues(){
 
 }
 
-/*
+
 process
   .on('SIGTERM', shutdown('SIGTERM'))
   .on('SIGINT', shutdown('SIGINT'))
@@ -499,4 +505,3 @@ function shutdown(signal) {
     }, 5000).unref();
   };
 }
-*/
